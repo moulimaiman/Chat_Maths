@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> Message </title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="icon.ico">
+</head>
+
+<body>
+    <div>
+        <h1 class="titrepage"> Messager_Math </h1>
+    </div>
+    <div class="struct">
+        <form class="content">
+            <div id="nameinfo">
+                <div id="proprety" onmouseover="infoproprety()" onmouseleave="hidproprety()">
+                    <span id="editname" onclick="namenumberedit()"> Edit Name </span>
+                </div>
+                <div id="createname" >
+                    <div style="display: none ;" id="spacecreate">
+                        <div><label for="newname" id="newname0"> Name : <input type="text" placeholder="New Name"
+                                    id="newname"> </label> </div> <br>
+                        <div><label for="newnumber" id="newnumber0"> Number : <input type="text"
+                                    placeholder="New Number" id="newnumber"> </label> </div> <br>
+                        <input type="button" value="Change" onclick="editchange()" id="butchangen">
+                    </div>
+                </div>
+                <div class="elemnt">
+                    <input type="button" value=" | " id="optin" onmouseover="infoproprety()"
+                        onmouseleave="hidproprety()">
+                    <input type="button" value="->" id="retr" onclick="infonamehid()">
+                </div>
+                <div>
+                    <div>
+                        <img src="Profil.jpg" id="imagepersn">
+                    </div>
+                    <div>
+                        <p id="namepersn"> Messager_Math </p>
+                    </div>
+                </div>
+                <hr>
+                <div class="calldata">
+                    <span id="detailinfo" onmousemove="viewdetail()" onmouseleave="hidetail()"> Details </span>
+                </div>
+                <div id="infodetail" onmousemove="viewdetail()" onmouseleave="hidetail()">
+                </div>
+            </div>
+            <div id="seeoption" onmouseleave="hidoptions()">
+                <ul id="listoptions">
+                    <li id="option1" onclick="infonameviiiew()"> Cantact Info </li>
+                    <li id="option2" onclick="editbackg()"> Edit Background </li>
+                    <li id="option3" onclick="deletemessg()"> Delete Chat </li>
+                </ul>
+            </div>
+            <div id="colorbackg">
+                <div style="display: none ;" id="spacechbgd">
+                    <input type="text" placeholder="Background-Color" id="backgdcolor"> <br>
+                    <input type="button" value="Appel" onclick="changebackg()" id="butchangebackg">
+                </div>
+            </div>
+            <div id="delmessg">
+                <div style="display: none;" id="spacedelmessg">
+                    <p class="suredelete"> Are you sure about deleting the messages ? </p>
+                    <input type="button" value="Yes" onclick="messgdelsure()" class="butyesdel">
+                    <input type="button" value="No" onclick="delcancel()" class="butnodel">
+                </div>
+            </div>
+            <section class="name">
+                <div class="structname">
+                    <div class="option">
+                        <span id="opt1" onclick="seeoptions()"> Settings </span>
+                        <span id="opt3" onclick="helpuser()"> Help </span>
+                    </div>
+                    <div class="name0">
+                        <span id="nam" onclick="infonameview()" style="word-wrap: break-word;"> Messager_Math </span>
+                        <img src="Profil.jpg" id="imgpersn" onclick="infonameview()">
+                    </div>
+                </div>
+            </section>
+            <div id="messg">
+                <section id="contentmessg">
+
+                </section>
+                <div id="loadingdel">
+                    <div style="display: none;" id="spaceloadel">
+                        Deleting ... <input type="button" value="Cancel" onclick="messgdelcancel()"
+                            class="butdelcancel">
+                    </div>
+                </div>
+            </div>
+            <section class="barsent">
+                <div id="spacesending">
+                    <div class="addsent">
+                        <span id="sentmessg" onclick="createmessg2()"> SEND </span>
+                    </div>
+                    <input type="text" id="writemessg" onkeydown="createmessg1(event)" placeholder="Write Message"> </textarea>
+                </div>
+            </section>
+        </form>
+    </div>
+</body>
+
+</html>

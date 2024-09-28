@@ -1,0 +1,577 @@
+body {
+    text-align: center ;
+    background-color: beige;
+}
+
+* {
+    transition: 0.75s ;
+    word-wrap: break-word ;
+}
+
+.titrepage {
+    font: bold 27pt calibri;
+}
+
+.titrepage:hover {
+    text-shadow: 3px 3px 4px #22ffaa ;
+    letter-spacing: 7px ;
+}
+
+.struct {
+    align-items: center ;
+    justify-content: center ;
+    display: inline-block ;
+}
+
+.content {
+    background-color: antiquewhite ;
+    width: 400px ;
+    min-height: 700px ;
+    border: 7px groove red ;
+    border-radius: 30px ;
+    align-items: center ;
+    text-align: center ;
+    padding: 0px ;
+    position: relative;
+}
+
+.name {
+    border-top-right-radius: 20px ;
+    border-top-left-radius: 20px ;
+    height: 73px ;
+    border: 2px solid #123242 ;
+    margin: 0px ;
+    align-items: center ;
+}
+
+.structname {
+    display: flex ;
+    justify-content:space-between ;
+    align-items: center ;
+}
+
+.name0 {
+    align-items: center;
+    text-align: center ;
+    justify-content: center ;
+    display: flex ;
+    padding: 22px ;
+    height: 29px;
+    width: 183px ;
+    word-wrap: break-word;
+    border-top-right-radius: 20px ;
+}
+
+.name0:hover {
+    background-color: azure ;
+}
+
+#imgpersn {
+    width: 35px ;
+    height: 35px ;
+    border-radius: 100% ;
+    border: none ;
+    margin-left: 10px ;
+    cursor: pointer;
+}
+
+#nam {
+    font: bold 13pt Tahoma;
+    cursor: pointer ;
+}
+
+#seeoption {
+    position: absolute ; 
+    top: 79px ;
+    left: 10px ;
+    width: 0px ;
+    height: 0px ;
+    opacity: 0% ;
+    padding: 0px ;
+    border-radius: 15px ;
+    background-color:  #2b2b2b ;
+}
+
+#listoptions {
+    padding-right: 20px ;
+    display: none ;
+    list-style : none ;
+}
+
+#option1 , #option2  , #option3  {
+    padding: 7px ;
+    color: #ccffdd ;
+    font: bold 13pt courier new ;
+}
+
+#option1:hover , #option2:hover , #option3:hover {
+    background-color: #aaff66;
+    color: black ;
+    cursor: pointer ;
+}
+
+#colorbackg {
+    position: absolute ; 
+    top: 79px ;
+    left: 10px ;
+    width: 0px ;
+    height: 120px ;
+    opacity: 0% ;
+    padding: 0px ;
+    border-radius: 15px ;
+    background-color:  #2b2b2b ;
+}
+
+#butchangebackg , #backgdcolor , .butyesdel , .butnodel {
+    border-radius: 20px;
+    padding: 10px ;
+    min-width: 80px ;
+    text-align: center;
+    font: bold 14pt courier new ;
+    margin-bottom: 7px ;
+}
+
+#butchangebackg:hover {
+    border: 2px solid green ;
+    background-color: #22ffaa ;
+}
+
+#backgdcolor:hover {
+    border: 2px double #99ffaa ;
+}
+
+#delmessg {
+    position: absolute ; 
+    top: 79px ;
+    left: 10px ;
+    width: 0px ;
+    height: 130px ;
+    opacity: 0% ;
+    padding: 0px ;
+    border-radius: 15px ;
+    background-color:  #2b2b2b ;
+}
+
+.suredelete {
+    font: oblique 700 14pt Tahoma ;
+    color: white ;
+}
+
+.butyesdel:hover {
+    background-color: #ff2277 ;
+    color: black;
+    border: 3px solid #22ffaa;
+}
+
+.butnodel:hover {
+    background-color: #77ff22 ;
+    color: #110011 ;
+    border: 3px solid #ff2277 ;
+}
+
+#loadingdel {
+    position: absolute ; 
+    top: 79px ;
+    width: 350px ;
+    height: 0px ;
+    opacity: 0% ;
+    padding: 0px ;
+    color: white;
+    font: oblique 456 13pt Tahoma ;
+    border-radius: 3px ;
+    background-color:  #2b2b2b ;
+}
+
+.butdelcancel {
+    margin-left: 50px ;
+    padding: 3px 7px ;
+    font: oblique 475 13pt Tahoma ; 
+    border: none ;
+    border-radius: 7px ;
+}
+
+.butdelcancel:hover {
+    background-color: orange ;
+    color: black ;
+    letter-spacing: 3px ;
+}
+
+#nameinfo {
+    position: absolute ;
+    background-color: #2b2b2b ;
+    min-height: 715px ;
+    min-width: 400px;
+    border-radius: 20px ;
+    display: none ;
+}
+
+.elemnt {
+    min-height: 40px ;
+    display: flex ; 
+    align-items: center ;
+    justify-content: space-between ;
+    border-bottom: 2px double #aaddaa;
+}
+
+#proprety {
+    width: 0px ;
+    height: 0px ;
+    opacity: 0% ;
+    position: absolute ;
+    left: 7px ;
+    top: 45px ;
+    border-radius: 15px ;
+    background-color: #777777  ;
+    transition: 0.5s ;
+    text-align: center ;
+}
+
+#editname {
+    padding: 10px ;
+    font: oblique bold 13pt Tahoma ;
+    color: #aaddaa ;
+    display: none;
+    cursor: default ;
+    border-radius: 20px;
+}
+
+#editname:hover {
+    letter-spacing: 3px ;
+    background-color: #99ffaa ;
+    color: black ;
+}
+
+#createname {
+    position: absolute ; 
+    left: 10px ;
+    top: 45px ;
+    padding : 0px ; 
+    width: 0px ;
+    opacity: 0% ;
+    height: 200px ;
+    transition: 0.5s ;
+    border-radius: 20px ;
+    box-shadow: 3px 4px 3px #777777;
+    background-color: #123242 ;
+    justify-content: center ;
+    display: inline-block ;
+}
+
+#newname , #newnumber {
+    text-align: center;
+    font: bold 13pt calibri ;
+    color: #110011 ;
+    padding: 4px ;
+    border-radius: 100px ;
+}
+
+#newname:hover , #newnumber:hover {
+    border: 4px double #22ffaa ;
+}
+
+#newname0 , #newnumber0 {
+    text-align: center ; 
+    font: bold 15pt courier new ;
+    color: white ;
+    padding: 5px ;
+    transition: 0.5s ;
+}
+
+#newname0:hover , #newnumber0:hover {
+    text-shadow: 2px -3px 4px #22ffaa ;
+    letter-spacing: 3px ;
+}
+
+#butchangen {
+    font: oblique bold 17px calibri ;
+    color: #110011 ; 
+    border-radius: 20px ;
+    border: none ;
+    padding: 5px ;
+    transition: 0.5s ;
+}
+
+#butchangen:hover {
+    letter-spacing: 4px ;
+    background-color: #99ffaa ;
+    color: black ;
+}
+
+#imagepersn {
+    width: 100px ;
+    height: 100px ;
+    border-radius: 100% ;
+    margin: 10px ;
+    cursor:  pointer;
+    transition: 0.5s ;
+}
+
+#imagepersn:hover {
+    width: 200px ;
+    height: 200px ;
+    border-radius: 5% ;
+}
+
+#namepersn {
+    font: bold 17pt Tahoma ;
+    color: aliceblue ;
+    transition: 0.5s ;
+    cursor: pointer;
+}
+
+#namepersn:hover {
+    letter-spacing: 4px ;
+    text-shadow: 2px 3px 2.5px yellow ;
+}
+
+.calldata {
+    padding: 25px ;
+}
+
+#detailinfo {
+    padding: 15px ;
+    border-radius: 20px;
+    font: bold 14pt Curlz MT ;
+    text-align: center ;
+    color: #aaff66 ;
+    cursor:  pointer; 
+    transition: 0.5s ;
+}
+
+#detailinfo:hover {
+    background-color: #b6b6b631;
+    letter-spacing: 4px ;
+}
+
+#infodetail {
+    background-color: #b6b6b631;
+    height: 0px ;
+    opacity: 0% ;
+    padding: 0px ;
+    transition: 0.5s ;
+    border-radius: 30px ;
+    text-align: center ;
+}
+
+.information {
+    font: bold 14pt courier new ;
+    color: #99ffaa;
+}
+
+#optin , #retr {
+    border: none ;
+    background: none ;
+    padding: 12px 20px ;
+    color: white;
+}
+
+#optin {
+    border-top-left-radius: 20px ;
+}
+
+#retr {
+    border-top-right-radius: 20px ;
+}
+
+#optin:hover , #retr:hover {
+    background-color: azure;
+    color: black ;
+    cursor:  pointer ; 
+}
+
+.option {
+    align-items: center;
+    text-align: center ;
+    justify-content: space-between ;
+    width: 170px ;
+}
+
+#opt1 , #opt3 {
+    font: bold 11pt courier new ;
+    padding: 30px 10px 27px 10px ;
+    cursor: pointer;
+    text-align: center;
+}
+
+#opt1 {
+    margin-left: -15px;
+    border-top-left-radius: 20px ;
+}
+
+#opt1:hover ,  #opt3:hover {
+    background-color: #ccffdd ;
+}
+
+#messg {
+    margin: 0px ;
+    height: 545px ;
+    padding: 7px ;
+    background-color: #ccffdd;
+    border: 2px solid #aabbff;
+    overflow-y: scroll ;
+}
+
+.spacemessg {
+    border-radius: 7px ;
+    display:  flex ; 
+    justify-content : space-between; 
+}
+
+.spacemessg:hover {
+    background-color: #9e9e9e33;
+}
+
+.messagewrite {
+    padding: 4px 7px ;
+    border: 2px solid green ;
+    background-color: #55ffaa;
+    max-width: 200px ;
+    border-radius: 10px ;
+    transition: 0.5s ;
+}
+
+.messageread {
+    font: bold 12pt calibri ;
+}
+
+.optionspace {
+      margin-right:  50px ; 
+      margin-top : 15px ; 
+}
+
+.casebutton {
+    min-width : 15px ; 
+    padding : 2px ; 
+    border-radius: 100px ;
+    border : 1.5px solid black ; 
+}
+
+.hour {
+    font: bold 8pt Courier New ;
+    color: #123242 ;
+    padding-left: 120px ;
+}
+
+.barsent  {
+    display: inline-block ;
+    align-items: center;
+    text-align: center ;
+    border-bottom-left-radius: 20px ;
+    border-bottom-right-radius: 20px ;
+    border: none;
+    height: 74px ;
+    width: 400px ;
+    background-color: #6464643b ;
+}
+
+#spacesending {
+    display: flex ;
+    align-items: center ;
+    justify-content: space-between ;
+    background-color: #110011;
+    border-radius: 100px ;
+    margin-top: 10px;
+}
+
+.addsent {
+    display: inline-block ;
+    align-items: center ;
+    text-align: center ;
+    width: 150px ;
+}
+
+#writemessg {
+    border-top-right-radius: 100px ;
+    border-bottom-right-radius: 100px;
+    border: none ;
+    background-color: black ;
+    color: white ;
+    font: 900 13pt calibri ;
+    text-align: center ;
+    padding: 4px 7px ;
+    height: 40px;
+    width: 400px ;
+}
+
+#sentmessg  {
+    padding: 15px 14px ;
+    cursor: pointer;
+    color: #2bff43;
+    font: oblique 900 13pt courier new ;
+}
+
+#sentmessg {
+    border-bottom-left-radius: 100px ;
+    border-top-left-radius: 100px ;
+    margin-left: -35px ;
+}
+
+#sentmessg:hover , #addmessg:hover {
+    background-color:  #15e0ff ;
+    color : #fff4d5 ;
+}
+
+#adding {
+    width: 0px ;
+    height: 0px ;
+    opacity: 0% ;
+    position: absolute ;
+    left: 70px ;
+    bottom: 75px ;
+    border-radius: 15px ;
+    background-color: #2b2b2b ;
+    transition: 1s ;
+}
+
+input[value="X"] {
+    padding: 10px 20px ;
+    border: none ;
+    font-size: 13pt;
+    margin-bottom: 20px ;
+}
+
+input[value="X"]:hover {
+    background-color: red ;
+}
+
+#elemntadd {
+    display: none ;
+    position: relative ;
+}
+
+.antibut {
+    text-align: right ;
+}
+
+#addvoice , #addimg {
+    color: black ; 
+    border: none;
+    border-radius: 100% ;
+    padding: 30px ;
+    font: bold 13pt courier new;
+}
+
+.spacemath {
+    border-radius: 7px ;
+    display: flex ;
+    justify-content: space-between;
+    margin-top : 10px ;
+    margin-bottom : 10px ;
+}
+
+.spacemath:hover {
+    background-color: #9e9e9e33;
+}
+ 
+.messagemath {
+    padding: 4px 7px ;
+    border: 2px solid #53ae47;
+    background-color: #22ff225d ;
+    max-width: 300px ;
+    border-radius: 13px ;
+    transition: 0.5s ;
+}
+
+.mathread {
+    font: bold 12pt calibri ;
+}
